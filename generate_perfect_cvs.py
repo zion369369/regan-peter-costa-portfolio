@@ -199,8 +199,7 @@ html_western = """<!DOCTYPE html>
     <div class="contact-item"><strong>Location:</strong> Dhaka, Bangladesh</div>
     <div class="contact-item"><strong>Phone:</strong> +880 1936 621888 / +880 1772 684986</div>
     <div class="contact-item"><strong>Email:</strong> <a href="mailto:regancosta1010@gmail.com">regancosta1010@gmail.com</a></div>
-    <div class="contact-item"><strong>LinkedIn:</strong> linkedin.com/in/regan-peter-costa</div>
-    <div class="contact-item"><strong>Portfolio:</strong> freeimage.host/i/n1g9P9e</div>
+    <div class="contact-item"><strong>Portfolio &amp; Verified Credentials:</strong> <a href="https://zion369369.github.io/regan-peter-costa-portfolio/" target="_blank">zion369369.github.io/regan-peter-costa-portfolio</a></div>
   </div>
   <div class="badge-row">
     <span class="badge badge-gold">10+ Years Continuous Dialysis Service (Square Hospitals Ltd.)</span>
@@ -609,8 +608,8 @@ html_gulf = f"""<!DOCTYPE html>
     <div class="contact-row">
       <div class="contact-item"><strong>Location:</strong> Dhaka, Bangladesh</div>
       <div class="contact-item"><strong>Phone:</strong> +880 1936 621888 / +880 1772 684986</div>
-      <div class="contact-item"><strong>Email:</strong> regancosta1010@gmail.com</div>
-      <div class="contact-item"><strong>Credentials:</strong> freeimage.host/i/n1g9P9e</div>
+      <div class="contact-item"><strong>Email:</strong> <a href="mailto:regancosta1010@gmail.com">regancosta1010@gmail.com</a></div>
+      <div class="contact-item"><strong>Portfolio &amp; Verified Credentials:</strong> <a href="https://zion369369.github.io/regan-peter-costa-portfolio/" target="_blank">zion369369.github.io/regan-peter-costa-portfolio</a></div>
     </div>
     <div class="badge-row">
       <span class="badge badge-gold">10+ Years Square Hospitals Ltd.</span>
