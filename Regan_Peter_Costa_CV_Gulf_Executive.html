@@ -6,30 +6,30 @@
 <style>
   @page {
     size: A4;
-    margin: 12mm 14mm 12mm 14mm;
+    margin: 10mm 13mm 10mm 13mm;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: 'Segoe UI', Calibri, Arial, sans-serif;
     color: #1a202c;
     background: #fff;
-    line-height: 1.40;
-    font-size: 9.6pt;
+    line-height: 1.34;
+    font-size: 9.1pt;
   }
   .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2.5px solid #0f4c81;
-    padding-bottom: 8px;
-    margin-bottom: 10px;
+    border-bottom: 2px solid #0f4c81;
+    padding-bottom: 5px;
+    margin-bottom: 7px;
   }
   .header-text {
     flex: 1;
   }
   .photo-box {
-    width: 100px;
-    height: 125px;
+    width: 95px;
+    height: 118px;
     margin-left: 15px;
     border-radius: 4px;
     border: 2px solid #cbd5e0;
@@ -42,41 +42,41 @@
     object-fit: cover;
   }
   .name {
-    font-size: 18.5pt;
-    font-weight: 700;
+    font-size: 18pt;
+    font-weight: 800;
     color: #0f4c81;
     text-transform: uppercase;
   }
   .title {
-    font-size: 11pt;
-    font-weight: 600;
+    font-size: 10.5pt;
+    font-weight: 700;
     color: #2b6cb0;
-    margin-top: 2px;
+    margin-top: 1px;
   }
   .contact-row {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    font-size: 8.5pt;
+    font-size: 8.3pt;
     color: #4a5568;
-    margin-top: 5px;
+    margin-top: 4px;
   }
-  .contact-item strong { color: #2d3748; }
+  .contact-item strong { color: #1a202c; }
   .contact-item a { color: #2b6cb0; text-decoration: none; }
 
   .badge-row {
-    margin-top: 6px;
+    margin-top: 5px;
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 4px;
   }
   .badge {
     background: #ebf8ff;
     color: #2b6cb0;
     border: 1px solid #bee3f8;
     font-size: 7.5pt;
-    font-weight: 600;
-    padding: 1.5px 6px;
+    font-weight: 700;
+    padding: 1.5px 5px;
     border-radius: 3px;
   }
   .badge-gold {
@@ -86,22 +86,24 @@
   }
 
   .section {
-    margin-bottom: 9px;
+    margin-bottom: 6px;
   }
   .section-title {
-    font-size: 9.8pt;
-    font-weight: 700;
+    font-size: 9.6pt;
+    font-weight: 800;
     color: #0f4c81;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border-bottom: 1px solid #cbd5e0;
-    padding-bottom: 2px;
-    margin-bottom: 5px;
+    letter-spacing: 0.4px;
+    border-bottom: 1.2px solid #cbd5e0;
+    padding-bottom: 1.5px;
+    margin-bottom: 4px;
+    break-after: avoid;
+    page-break-after: avoid;
   }
   .summary-text {
-    font-size: 9pt;
+    font-size: 8.8pt;
     color: #2d3748;
-    line-height: 1.45;
+    line-height: 1.38;
     text-align: justify;
   }
 
@@ -110,23 +112,23 @@
     border-collapse: collapse;
     background: #f8fafc;
     border: 1px solid #e2e8f0;
-    font-size: 8.2pt;
-    margin-bottom: 8px;
+    font-size: 8.1pt;
+    margin-bottom: 6px;
   }
   .info-table td {
-    padding: 3.5px 6px;
+    padding: 3px 5px;
     border: 1px solid #e2e8f0;
   }
   .info-table td.label {
-    font-weight: 600;
+    font-weight: 700;
     color: #4a5568;
     background: #edf2f7;
-    width: 18%;
+    width: 17%;
   }
   .info-table td.val {
     color: #1a202c;
     font-weight: 500;
-    width: 32%;
+    width: 33%;
   }
 
   .skills-table {
@@ -134,53 +136,55 @@
     border-collapse: collapse;
     background: #f8fafc;
     border: 1px solid #e2e8f0;
-    font-size: 8.3pt;
+    font-size: 8.1pt;
   }
   .skills-table td {
-    padding: 4px 6px;
+    padding: 3px 5px;
     vertical-align: top;
     border: 1px solid #e2e8f0;
-    line-height: 1.32;
+    line-height: 1.30;
   }
   .skills-table td strong {
     color: #0f4c81;
     display: inline-block;
-    width: 120px;
+    width: 110px;
   }
 
   .job-block {
-    margin-bottom: 8px;
-    page-break-inside: avoid;
+    margin-bottom: 5px;
   }
   .job-head {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    break-after: avoid;
+    page-break-after: avoid;
   }
   .job-role {
-    font-size: 9.8pt;
-    font-weight: 700;
+    font-size: 9.5pt;
+    font-weight: 800;
     color: #1a202c;
   }
   .job-hospital {
-    font-size: 9pt;
-    font-weight: 600;
+    font-size: 8.9pt;
+    font-weight: 700;
     color: #2b6cb0;
   }
   .job-dates {
-    font-size: 8.5pt;
-    font-weight: 600;
+    font-size: 8.4pt;
+    font-weight: 700;
     color: #4a5568;
   }
   .job-bullets {
-    margin-top: 3px;
+    margin-top: 2.5px;
     padding-left: 14px;
-    font-size: 8.6pt;
+    font-size: 8.4pt;
     color: #2d3748;
-    line-height: 1.40;
+    line-height: 1.35;
   }
   .job-bullets li {
     margin-bottom: 2px;
+    page-break-inside: avoid;
   }
 
   .grid-2col {
@@ -193,27 +197,33 @@
     border: 1px solid #e2e8f0;
     border-radius: 4px;
     padding: 5px 8px;
-    font-size: 8.3pt;
+    font-size: 8.2pt;
     page-break-inside: avoid;
   }
   .card strong {
     color: #0f4c81;
-    font-size: 8.8pt;
+    font-size: 8.7pt;
     display: block;
-    margin-bottom: 2px;
+    margin-bottom: 1px;
   }
   .card p {
     color: #4a5568;
-    line-height: 1.3;
+    line-height: 1.25;
+  }
+
+  .page-break {
+    page-break-before: always;
+    break-before: page;
   }
 </style>
 </head>
 <body>
 
+<!-- PAGE 1: Header + Photo + GCC Details + Summary + Competencies + Square Hospitals -->
 <div class="header-container">
   <div class="header-text">
     <div class="name">Regan Peter Costa, RN</div>
-    <div class="title">Senior Hemodialysis Nurse Specialist &ndash; Square Hospitals Ltd.</div>
+    <div class="title">Senior Hemodialysis Specialist Nurse &ndash; Square Hospitals Ltd.</div>
     <div class="contact-row">
       <div class="contact-item"><strong>Location:</strong> Dhaka, Bangladesh</div>
       <div class="contact-item"><strong>Phone:</strong> +880 1936 621888 / +880 1772 684986</div>
@@ -224,8 +234,7 @@
       <span class="badge badge-gold">10+ Years Square Hospitals Ltd.</span>
       <span class="badge">BNMC Active (Valid to 2029)</span>
       <span class="badge">BLS Certified (2025)</span>
-      <span class="badge">Fresenius / B. Braun / SLED Expert</span>
-      <span class="badge">GCC / DataFlow Ready</span>
+      <span class="badge">DataFlow / GCC Ready</span>
     </div>
   </div>
   <div class="photo-box">
@@ -234,7 +243,7 @@
 </div>
 
 <div class="section">
-  <div class="section-title">Personal &amp; Regulatory Credentials (GCC / Middle East Authorities)</div>
+  <div class="section-title">Personal &amp; Regulatory Credentials (GCC Authorities)</div>
   <table class="info-table">
     <tr>
       <td class="label">Date of Birth:</td>
@@ -257,7 +266,7 @@
     <tr>
       <td class="label">BNMC License:</td>
       <td class="val">Reg No: 32750 (Valid to 05-07-2029)</td>
-      <td class="label">DataFlow / Prometric:</td>
+      <td class="label">DataFlow / PSV:</td>
       <td class="val">Document Verification Ready (SCFHS, DHA, DOH, QCHP)</td>
     </tr>
   </table>
@@ -266,30 +275,12 @@
 <div class="section">
   <div class="section-title">Professional Summary</div>
   <p class="summary-text">
-    Highly skilled <strong>Senior Hemodialysis Nurse</strong> with <strong>over 10 consecutive years of clinical practice</strong> in the Hemodialysis &amp; Nephrology Department of <strong>Square Hospitals Ltd.</strong> (leading JCI-standard tertiary private hospital in Dhaka). Expert in independently operating, calibrating, and troubleshooting major dialysis platforms: <strong>Fresenius 4008S, 5008 CorDiax, B. Braun Dialog+, Gambro AK 96</strong>, and ICU bedside <strong>Sustained Low-Efficiency Dialysis (SLED)</strong>. Master of native Arteriovenous Fistula (AVF) and Graft (AVG) cannulation, sterile Central Venous Catheter (<strong>Permcath</strong>) maintenance under strict Aseptic Non-Touch Technique (ANTT), and emergency intradialytic stabilization. Certified BLS provider with active BNMC registration valid through July 2029. Actively seeking senior nursing opportunities across premier hospitals in <strong>Saudi Arabia, UAE, Qatar, and Kuwait</strong>.
+    Highly experienced <strong>Senior Hemodialysis Nurse</strong> with <strong>over 10 consecutive years of clinical practice</strong> in the specialized Hemodialysis Department of <strong>Square Hospitals Ltd.</strong> (Dhaka's premier JCI-standard tertiary private hospital). Expert in independently operating, calibrating, and troubleshooting major dialysis platforms: <strong>Fresenius 4008S, 5008 CorDiax, B. Braun Dialog+, Gambro AK 96</strong>, and ICU bedside <strong>Sustained Low-Efficiency Dialysis (SLED)</strong>. Master of native Arteriovenous Fistula (AVF) and Graft (AVG) cannulation, sterile Central Venous Catheter (<strong>Permcath</strong>) maintenance under strict Aseptic Non-Touch Technique (ANTT), and emergency intradialytic stabilization. Certified BLS provider with active BNMC registration valid through July 2029. Actively seeking senior clinical opportunities across premier hospitals in <strong>Saudi Arabia, UAE, Qatar, and Kuwait</strong>.
   </p>
 </div>
 
 <div class="section">
-  <div class="section-title">Core Clinical Competencies</div>
-  <table class="skills-table">
-    <tr>
-      <td><strong>Dialysis Modalities:</strong> Intermittent Hemodialysis (IHD), SLED (ICU bedside), Online HDF, High-Flux Hemodialysis, Isolated Ultrafiltration (SCUF).</td>
-      <td><strong>Machinery:</strong> Fresenius 4008S, 5008 CorDiax, B. Braun Dialog+, Gambro AK 96, SLED critical care hemodialysis.</td>
-    </tr>
-    <tr>
-      <td><strong>Vascular Access:</strong> Native AV Fistula &amp; Graft cannulation (Rope-ladder/Buttonhole), Bruit/Thrill surveillance, Steal syndrome detection.</td>
-      <td><strong>CVC &amp; Permcath:</strong> Tunneled Permcath sterile access, Heparin (1000/5000 IU/mL) &amp; Citrate locks, ANTT dressings, Clot clearance.</td>
-    </tr>
-    <tr>
-      <td><strong>Emergency Stabilization:</strong> Intradialytic hypotension management, DDS response, dialyzer reaction intervention, air embolism protocol, BLS CPR.</td>
-      <td><strong>Water Plant &amp; Adequacy:</strong> Reverse Osmosis (RO) monitoring, Total Chlorine/Chloramine testing (&lt; 0.1 ppm, AAMI/ISO 23500), Kt/V &ge; 1.3, URR &gt; 68%.</td>
-    </tr>
-  </table>
-</div>
-
-<div class="section">
-  <div class="section-title">Professional Clinical Experience</div>
+  <div class="section-title">Specialized Hemodialysis Experience</div>
 
   <div class="job-block">
     <div class="job-head">
@@ -311,6 +302,13 @@
       <li><em>Formally Endorsed by Dr. Mosaddeque Ahmed, MBBS, MRCP (UK), Consultant Nephrology, Square Hospitals Ltd.</em></li>
     </ul>
   </div>
+</div>
+
+<!-- PAGE 2: Prior Experience + Qualifications + Equipment Log + Languages -->
+<div class="page-break"></div>
+
+<div class="section" style="margin-top: 2px;">
+  <div class="section-title">Prior Clinical Experience</div>
 
   <div class="job-block">
     <div class="job-head">
@@ -322,6 +320,7 @@
     </div>
     <ul class="job-bullets">
       <li>Delivered bedside clinical care across general medical and surgical wards, coordinating admissions, post-op wound dressings, and medication administration.</li>
+      <li>Assisted attending consultants during bedside sterile procedures and managed pre/post-operative surgical recovery pathways.</li>
     </ul>
   </div>
 
@@ -335,12 +334,13 @@
     </div>
     <ul class="job-bullets">
       <li>Completed supervised rotations across Medicine, Surgery, Pediatrics, Emergency, and Nephrology departments.</li>
+      <li>Maintained accurate, confidential electronic and physical patient records adhering to hospital documentation protocols.</li>
     </ul>
   </div>
 </div>
 
 <div class="section">
-  <div class="section-title">Education &amp; Professional Certifications</div>
+  <div class="section-title">Qualifications &amp; Professional Credentials</div>
   <div class="grid-2col">
     <div class="card">
       <strong>Diploma in Nursing Science and Midwifery (3 Years)</strong>
@@ -361,12 +361,48 @@
   </div>
 </div>
 
-<div class="section" style="margin-top: 5px;">
-  <div class="section-title">Languages &amp; IT Skills</div>
-  <p style="font-size: 8.3pt; color: #4a5568;">
-    <strong>Languages:</strong> English (Professional Working Proficiency), Bengali (Native).<br>
-    <strong>Computer Systems:</strong> Hospital Information Systems (HIS), EMR, Microsoft Office (Word, Excel, PowerPoint).
-  </p>
+<div class="section">
+  <div class="section-title">Clinical Competencies &amp; Equipment Mastery</div>
+  <table class="skills-table">
+    <tr>
+      <td style="width: 25%;"><strong>Dialysis Machines:</strong></td>
+      <td>Fresenius 4008S, 5008 CorDiax, B. Braun Dialog+, Gambro AK 96, ICU Bedside SLED systems.</td>
+    </tr>
+    <tr>
+      <td><strong>Vascular Cannulation:</strong></td>
+      <td>Native AV Fistula &amp; Graft cannulation (Rope-ladder / Buttonhole), Bruit &amp; Thrill surveillance.</td>
+    </tr>
+    <tr>
+      <td><strong>Central Venous Lines:</strong></td>
+      <td>Tunneled Permcath sterile access, 5000 IU/mL Heparin &amp; Citrate locks, ANTT dressings, Clot aspiration.</td>
+    </tr>
+    <tr>
+      <td><strong>Emergency Response:</strong></td>
+      <td>Intradialytic hypotension protocol, DDS management, dialyzer reaction intervention, BLS CPR.</td>
+    </tr>
+    <tr>
+      <td><strong>Water Plant Quality:</strong></td>
+      <td>Daily RO total chlorine/chloramine testing (&lt;0.1 ppm, AAMI/ISO 23500), Kt/V &ge; 1.3, URR &gt; 68%.</td>
+    </tr>
+  </table>
+</div>
+
+<div class="section">
+  <div class="section-title">Languages, IT Skills &amp; Declaration</div>
+  <table class="skills-table">
+    <tr>
+      <td style="width: 25%;"><strong>Languages:</strong></td>
+      <td><strong>English:</strong> Professional Working Proficiency.<br><strong>Bengali:</strong> Native / Mother Tongue.</td>
+    </tr>
+    <tr>
+      <td><strong>Computer Systems:</strong></td>
+      <td>Hospital Information Systems (HIS), Electronic Medical Records (EMR), Microsoft Office Suite.</td>
+    </tr>
+    <tr>
+      <td><strong>Official Declaration:</strong></td>
+      <td>I hereby solemnly declare that all statements presented are true and authentic. Verified credentials and consultant recommendation letters available immediately upon request.</td>
+    </tr>
+  </table>
 </div>
 
 </body>

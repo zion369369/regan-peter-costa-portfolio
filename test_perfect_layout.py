@@ -1,4 +1,16 @@
-<!DOCTYPE html>
+import os
+import pymupdf
+import subprocess
+import shutil
+
+work_dir = r"C:\Users\SURFACE LAPTOP\.gemini\antigravity\scratch\regan_costa_nursing_cv"
+downloads_dir = r"C:\Users\SURFACE LAPTOP\Downloads"
+
+# Let's design the Western ATS HTML so:
+# Page 1 contains Header, Summary, Competencies, AND Square Hospitals Ltd. (the 10-year experience)
+# Page 2 contains Green Life (Senior Staff Nurse), Green Life (Internship), Education, Licenses/Certifications, and Proficiencies
+
+html_content = """<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -13,13 +25,14 @@
     font-family: 'Segoe UI', Calibri, Arial, sans-serif;
     color: #1a202c;
     background: #fff;
-    line-height: 1.34;
-    font-size: 9.2pt;
+    line-height: 1.35;
+    font-size: 9.3pt;
   }
   
+  /* Header */
   .header {
     border-bottom: 2px solid #0f4c81;
-    padding-bottom: 5px;
+    padding-bottom: 6px;
     margin-bottom: 7px;
   }
   .name {
@@ -67,6 +80,7 @@
     border: 1px solid #faf089;
   }
 
+  /* Section Styling */
   .section {
     margin-bottom: 7px;
   }
@@ -83,24 +97,25 @@
     page-break-after: avoid;
   }
   .summary-text {
-    font-size: 8.8pt;
+    font-size: 8.9pt;
     color: #2d3748;
-    line-height: 1.40;
+    line-height: 1.42;
     text-align: justify;
   }
 
+  /* Skills Table */
   .skills-table {
     width: 100%;
     border-collapse: collapse;
     background: #f8fafc;
     border: 1px solid #e2e8f0;
-    font-size: 8.2pt;
+    font-size: 8.3pt;
   }
   .skills-table td {
-    padding: 3px 6px;
+    padding: 3.5px 6px;
     vertical-align: top;
     border: 1px solid #e2e8f0;
-    line-height: 1.30;
+    line-height: 1.32;
   }
   .skills-table td strong {
     color: #0f4c81;
@@ -108,8 +123,9 @@
     width: 115px;
   }
 
+  /* Job Blocks */
   .job-block {
-    margin-bottom: 5px;
+    margin-bottom: 6px;
   }
   .job-head {
     display: flex;
@@ -119,12 +135,12 @@
     page-break-after: avoid;
   }
   .job-role {
-    font-size: 9.5pt;
+    font-size: 9.6pt;
     font-weight: 800;
     color: #1a202c;
   }
   .job-hospital {
-    font-size: 8.9pt;
+    font-size: 9pt;
     font-weight: 700;
     color: #2b6cb0;
   }
@@ -134,17 +150,18 @@
     color: #4a5568;
   }
   .job-bullets {
-    margin-top: 2.5px;
+    margin-top: 3px;
     padding-left: 14px;
-    font-size: 8.5pt;
+    font-size: 8.6pt;
     color: #2d3748;
-    line-height: 1.36;
+    line-height: 1.38;
   }
   .job-bullets li {
     margin-bottom: 2px;
     page-break-inside: avoid;
   }
 
+  /* Grid Layouts */
   .grid-2col {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -155,20 +172,21 @@
     border: 1px solid #e2e8f0;
     border-radius: 4px;
     padding: 5px 8px;
-    font-size: 8.3pt;
+    font-size: 8.4pt;
     page-break-inside: avoid;
   }
   .card strong {
     color: #0f4c81;
-    font-size: 8.8pt;
+    font-size: 8.9pt;
     display: block;
     margin-bottom: 1px;
   }
   .card p {
     color: #4a5568;
-    line-height: 1.25;
+    line-height: 1.28;
   }
 
+  /* Force Clean Page Break */
   .page-break {
     page-break-before: always;
     break-before: page;
@@ -177,7 +195,7 @@
 </head>
 <body>
 
-<!-- PAGE 1: Core Profile + Competencies + Square Hospitals Ltd. (10 Years) -->
+<!-- ================= PAGE 1 ================= -->
 <div class="header">
   <div class="name">Regan Peter Costa, RN</div>
   <div class="title">Registered Nurse &ndash; Hemodialysis &amp; Nephrology Specialist</div>
@@ -251,11 +269,11 @@
   </div>
 </div>
 
-<!-- PAGE 2: Prior Experience + Qualifications + Equipment Log + Languages -->
+<!-- ================= PAGE 2 ================= -->
 <div class="page-break"></div>
 
-<div class="section" style="margin-top: 2px;">
-  <div class="section-title">Prior Clinical Experience</div>
+<div class="section" style="margin-top: 4px;">
+  <div class="section-title">Prior Clinical Work Experience</div>
 
   <div class="job-block">
     <div class="job-head">
@@ -344,7 +362,7 @@
 </div>
 
 <div class="section">
-  <div class="section-title">Languages, IT Systems &amp; Declaration</div>
+  <div class="section-title">Languages, IT Skills &amp; Declaration</div>
   <table class="skills-table">
     <tr>
       <td style="width: 25%;"><strong>Languages:</strong></td>
@@ -363,3 +381,36 @@
 
 </body>
 </html>
+"""
+
+test_html = os.path.join(work_dir, "test_ats.html")
+test_pdf = os.path.join(work_dir, "test_ats.pdf")
+
+with open(test_html, "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+edge_path = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
+cmd = [
+    edge_path,
+    "--headless",
+    "--disable-gpu",
+    "--no-pdf-header-footer",
+    f"--print-to-pdf={test_pdf}",
+    test_html
+]
+subprocess.run(cmd, check=True)
+
+# Render pages to PNG
+doc = pymupdf.open(test_pdf)
+print(f"Total pages: {len(doc)}")
+for i, page in enumerate(doc):
+    pix = page.get_pixmap(dpi=150)
+    img_path = os.path.join(work_dir, f"test_ats_p{i+1}.png")
+    pix.save(img_path)
+    print(f"Saved: {img_path}")
+"""
+
+with open(r"C:\Users\SURFACE LAPTOP\.gemini\antigravity\scratch\regan_costa_nursing_cv\test_perfect_layout.py", "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print("Wrote test script")
